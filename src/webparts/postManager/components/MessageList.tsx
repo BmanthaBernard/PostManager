@@ -1,28 +1,25 @@
 import * as React from 'react';
 import pnp from 'sp-pnp-js';
-import IMessageListProps from './IMessageListProps';
+import MessageRow from './MessageRow';
 
-export default class MessageList extends React.Component<IMessageListProps, {}> {
+export default class MessageList extends React.Component<any,any> {
+
     constructor(props){
         super(props);
-        pnp.sp.web.get().then(r => {
-            
-            console.log(r);
-        });
-        pnp.sp.web.lists.getByTitle("Site Pages").get().then(r => {
-            
-            console.log(r);
-        });
-        // GET /_api/web/lists/getByTitle('Tasks')/items
-        pnp.sp.web.lists.getByTitle("Site Pages").items.get().then(r => {
-            console.log(r);
-        });
+       console.log (props);
     }
-    public render(): React.ReactElement<IMessageListProps> {
+    
+    public render(): React.ReactElement<any> {
+        if (!this.props.rows){
+            return ( <div> Loading </div> );
+        }
         console.log('in render of messagelist');
+
+        var MessageListHTML =   this.props.rows.map((row) => {
+            return (<MessageRow row={row} />);
+        })
         return (
-        <div>Test Component Message List</div>
+            <table><tr><td>Archive</td><td></td><td>last discussed</td><td>topic</td></tr>{MessageListHTML}</table>
         );
       }
-
 }
