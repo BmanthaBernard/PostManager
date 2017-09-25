@@ -1,0 +1,8 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "version": "1.2.0",
+    "libraryName": "post-manager",
+    "libraryId": "7e102626-de3f-483f-ae66-f59286f1d03a",
+    "environment": "spo"
+  }
+}

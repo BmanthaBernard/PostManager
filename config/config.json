@@ -1,0 +1,18 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "post-manager-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/postManager/PostManagerWebPart.js",
+          "manifest": "./src/webparts/postManager/PostManagerWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "PostManagerWebPartStrings": "lib/webparts/postManager/loc/{locale}.js"
+  }
+}

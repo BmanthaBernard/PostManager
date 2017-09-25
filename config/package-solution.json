@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "post-manager-client-side-solution",
+    "id": "7e102626-de3f-483f-ae66-f59286f1d03a",
+    "version": "1.0.0.0",
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/post-manager.sppkg"
+  }
+}
